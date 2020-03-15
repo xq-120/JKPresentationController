@@ -1,5 +1,5 @@
 //
-//  ZAEPublishCommentAlertViewController.swift
+//  JKPublishCommentAlertViewController.swift
 //  UIPresentationController_demo
 //
 //  Created by jekyttt on 2019/3/13.

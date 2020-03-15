@@ -1,5 +1,5 @@
 //
-//  ZAEPushAlertViewController.swift
+//  JKPushAlertViewController.swift
 //  UIPresentationController_demo
 //
 //  Created by jekyttt on 2019/3/25.

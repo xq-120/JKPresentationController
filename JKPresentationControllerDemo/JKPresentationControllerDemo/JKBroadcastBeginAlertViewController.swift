@@ -1,5 +1,5 @@
 //
-//  ZAEBroadcastBeginAlertView.swift
+//  JKBroadcastBeginAlertViewController.swift
 //  DemonSwift
 //
 //  Created by jekyttt on 2019/5/28.
