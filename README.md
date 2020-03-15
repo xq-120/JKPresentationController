@@ -27,9 +27,8 @@ self.jk_hide(withAnimated: true) { [unowned self] in
 ```
 
 示例如下:
+<img src="https://raw.githubusercontent.com/xq-120/cloudImage/master/pictures/20200315223637.png" alt="图片替换文本" width="200" height="400" align="middle" />
 
-![](https://raw.githubusercontent.com/xq-120/cloudImage/master/pictures/20200315223637.png)
+<img src="https://raw.githubusercontent.com/xq-120/cloudImage/master/pictures/20200315223713.png" alt="图片替换文本" width="200" height="400" align="middle" />
 
-![](https://raw.githubusercontent.com/xq-120/cloudImage/master/pictures/20200315223713.png)
-
-![](https://raw.githubusercontent.com/xq-120/cloudImage/master/pictures/20200315223732.png)
+<img src="https://raw.githubusercontent.com/xq-120/cloudImage/master/pictures/20200315223732.png" alt="图片替换文本" width="200" height="400" align="middle" />
