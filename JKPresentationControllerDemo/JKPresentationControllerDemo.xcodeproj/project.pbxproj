@@ -1,0 +1,695 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8FA746E8241E155E005F1923 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA746E7241E155E005F1923 /* AppDelegate.swift */; };
+		8FA746EA241E155E005F1923 /* FDEHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA746E9241E155E005F1923 /* FDEHomeViewController.swift */; };
+		8FA746EC241E155E005F1923 /* FDEDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA746EB241E155E005F1923 /* FDEDetailViewController.swift */; };
+		8FA746EE241E155E005F1923 /* FDEMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA746ED241E155E005F1923 /* FDEMessageViewController.swift */; };
+		8FA746F0241E155E005F1923 /* FDEMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA746EF241E155E005F1923 /* FDEMineViewController.swift */; };
+		8FA746F2241E155E005F1923 /* FDETabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA746F1241E155E005F1923 /* FDETabBarController.swift */; };
+		8FA746F4241E155E005F1923 /* FDEBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA746F3241E155E005F1923 /* FDEBaseViewController.swift */; };
+		8FA746F6241E155E005F1923 /* FDENavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA746F5241E155E005F1923 /* FDENavigationController.swift */; };
+		8FA746F8241E155E005F1923 /* DLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA746F7241E155E005F1923 /* DLog.swift */; };
+		8FA746FA241E1561005F1923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FA746F9241E1561005F1923 /* Assets.xcassets */; };
+		8FA746FD241E1561005F1923 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FA746FB241E1561005F1923 /* LaunchScreen.storyboard */; };
+		8FA74708241E1561005F1923 /* JKPresentationControllerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA74707241E1561005F1923 /* JKPresentationControllerDemoTests.swift */; };
+		8FA74713241E1561005F1923 /* JKPresentationControllerDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA74712241E1561005F1923 /* JKPresentationControllerDemoUITests.swift */; };
+		8FA74721241E2E6C005F1923 /* JKPublishCommentAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA74720241E2E6C005F1923 /* JKPublishCommentAlertViewController.swift */; };
+		8FA74723241E2E94005F1923 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA74722241E2E94005F1923 /* UIView+Corner.swift */; };
+		8FA74727241E4EF3005F1923 /* JKBroadcastBeginAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA74726241E4EF3005F1923 /* JKBroadcastBeginAlertViewController.swift */; };
+		8FA74729241E5792005F1923 /* JKPushAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA74728241E5792005F1923 /* JKPushAlertViewController.swift */; };
+		C975B14A037832DF58E3FB69 /* Pods_JKPresentationControllerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9500D80BA3922A8E6A5658B0 /* Pods_JKPresentationControllerDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FA74704241E1561005F1923 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FA746DC241E155E005F1923 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FA746E3241E155E005F1923;
+			remoteInfo = JKPresentationControllerDemo;
+		};
+		8FA7470F241E1561005F1923 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FA746DC241E155E005F1923 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FA746E3241E155E005F1923;
+			remoteInfo = JKPresentationControllerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		23C1FD4ABCCCA1634EAAAF42 /* Pods-JKPresentationControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKPresentationControllerDemo.debug.xcconfig"; path = "Target Support Files/Pods-JKPresentationControllerDemo/Pods-JKPresentationControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7120BC5386903570DB63CB98 /* Pods-JKPresentationControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKPresentationControllerDemo.release.xcconfig"; path = "Target Support Files/Pods-JKPresentationControllerDemo/Pods-JKPresentationControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8FA746E4241E155E005F1923 /* JKPresentationControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKPresentationControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA746E7241E155E005F1923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8FA746E9241E155E005F1923 /* FDEHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDEHomeViewController.swift; sourceTree = "<group>"; };
+		8FA746EB241E155E005F1923 /* FDEDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDEDetailViewController.swift; sourceTree = "<group>"; };
+		8FA746ED241E155E005F1923 /* FDEMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDEMessageViewController.swift; sourceTree = "<group>"; };
+		8FA746EF241E155E005F1923 /* FDEMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDEMineViewController.swift; sourceTree = "<group>"; };
+		8FA746F1241E155E005F1923 /* FDETabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDETabBarController.swift; sourceTree = "<group>"; };
+		8FA746F3241E155E005F1923 /* FDEBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDEBaseViewController.swift; sourceTree = "<group>"; };
+		8FA746F5241E155E005F1923 /* FDENavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDENavigationController.swift; sourceTree = "<group>"; };
+		8FA746F7241E155E005F1923 /* DLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLog.swift; sourceTree = "<group>"; };
+		8FA746F9241E1561005F1923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FA746FC241E1561005F1923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8FA746FE241E1561005F1923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FA74703241E1561005F1923 /* JKPresentationControllerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKPresentationControllerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA74707241E1561005F1923 /* JKPresentationControllerDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKPresentationControllerDemoTests.swift; sourceTree = "<group>"; };
+		8FA74709241E1561005F1923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FA7470E241E1561005F1923 /* JKPresentationControllerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKPresentationControllerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA74712241E1561005F1923 /* JKPresentationControllerDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKPresentationControllerDemoUITests.swift; sourceTree = "<group>"; };
+		8FA74714241E1561005F1923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FA74720241E2E6C005F1923 /* JKPublishCommentAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKPublishCommentAlertViewController.swift; sourceTree = "<group>"; };
+		8FA74722241E2E94005F1923 /* UIView+Corner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
+		8FA74726241E4EF3005F1923 /* JKBroadcastBeginAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKBroadcastBeginAlertViewController.swift; sourceTree = "<group>"; };
+		8FA74728241E5792005F1923 /* JKPushAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKPushAlertViewController.swift; sourceTree = "<group>"; };
+		9500D80BA3922A8E6A5658B0 /* Pods_JKPresentationControllerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKPresentationControllerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FA746E1241E155E005F1923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C975B14A037832DF58E3FB69 /* Pods_JKPresentationControllerDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FA74700241E1561005F1923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FA7470B241E1561005F1923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		581823FD57AD3DB5E3F220BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23C1FD4ABCCCA1634EAAAF42 /* Pods-JKPresentationControllerDemo.debug.xcconfig */,
+				7120BC5386903570DB63CB98 /* Pods-JKPresentationControllerDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8FA746DB241E155E005F1923 = {
+			isa = PBXGroup;
+			children = (
+				8FA746E6241E155E005F1923 /* JKPresentationControllerDemo */,
+				8FA74706241E1561005F1923 /* JKPresentationControllerDemoTests */,
+				8FA74711241E1561005F1923 /* JKPresentationControllerDemoUITests */,
+				8FA746E5241E155E005F1923 /* Products */,
+				581823FD57AD3DB5E3F220BB /* Pods */,
+				BEBB1B7C51BFE59365DBD0EB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8FA746E5241E155E005F1923 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FA746E4241E155E005F1923 /* JKPresentationControllerDemo.app */,
+				8FA74703241E1561005F1923 /* JKPresentationControllerDemoTests.xctest */,
+				8FA7470E241E1561005F1923 /* JKPresentationControllerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FA746E6241E155E005F1923 /* JKPresentationControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8FA746E7241E155E005F1923 /* AppDelegate.swift */,
+				8FA746E9241E155E005F1923 /* FDEHomeViewController.swift */,
+				8FA746EB241E155E005F1923 /* FDEDetailViewController.swift */,
+				8FA746ED241E155E005F1923 /* FDEMessageViewController.swift */,
+				8FA746EF241E155E005F1923 /* FDEMineViewController.swift */,
+				8FA746F1241E155E005F1923 /* FDETabBarController.swift */,
+				8FA746F3241E155E005F1923 /* FDEBaseViewController.swift */,
+				8FA746F5241E155E005F1923 /* FDENavigationController.swift */,
+				8FA746F7241E155E005F1923 /* DLog.swift */,
+				8FA74728241E5792005F1923 /* JKPushAlertViewController.swift */,
+				8FA74720241E2E6C005F1923 /* JKPublishCommentAlertViewController.swift */,
+				8FA74726241E4EF3005F1923 /* JKBroadcastBeginAlertViewController.swift */,
+				8FA74722241E2E94005F1923 /* UIView+Corner.swift */,
+				8FA746F9241E1561005F1923 /* Assets.xcassets */,
+				8FA746FB241E1561005F1923 /* LaunchScreen.storyboard */,
+				8FA746FE241E1561005F1923 /* Info.plist */,
+			);
+			path = JKPresentationControllerDemo;
+			sourceTree = "<group>";
+		};
+		8FA74706241E1561005F1923 /* JKPresentationControllerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8FA74707241E1561005F1923 /* JKPresentationControllerDemoTests.swift */,
+				8FA74709241E1561005F1923 /* Info.plist */,
+			);
+			path = JKPresentationControllerDemoTests;
+			sourceTree = "<group>";
+		};
+		8FA74711241E1561005F1923 /* JKPresentationControllerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8FA74712241E1561005F1923 /* JKPresentationControllerDemoUITests.swift */,
+				8FA74714241E1561005F1923 /* Info.plist */,
+			);
+			path = JKPresentationControllerDemoUITests;
+			sourceTree = "<group>";
+		};
+		BEBB1B7C51BFE59365DBD0EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9500D80BA3922A8E6A5658B0 /* Pods_JKPresentationControllerDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FA746E3241E155E005F1923 /* JKPresentationControllerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FA74717241E1561005F1923 /* Build configuration list for PBXNativeTarget "JKPresentationControllerDemo" */;
+			buildPhases = (
+				B4E4460DE1914E2F381ED840 /* [CP] Check Pods Manifest.lock */,
+				8FA746E0241E155E005F1923 /* Sources */,
+				8FA746E1241E155E005F1923 /* Frameworks */,
+				8FA746E2241E155E005F1923 /* Resources */,
+				CCCD378E487ACB18DF414110 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JKPresentationControllerDemo;
+			productName = JKPresentationControllerDemo;
+			productReference = 8FA746E4241E155E005F1923 /* JKPresentationControllerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8FA74702241E1561005F1923 /* JKPresentationControllerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FA7471A241E1561005F1923 /* Build configuration list for PBXNativeTarget "JKPresentationControllerDemoTests" */;
+			buildPhases = (
+				8FA746FF241E1561005F1923 /* Sources */,
+				8FA74700241E1561005F1923 /* Frameworks */,
+				8FA74701241E1561005F1923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FA74705241E1561005F1923 /* PBXTargetDependency */,
+			);
+			name = JKPresentationControllerDemoTests;
+			productName = JKPresentationControllerDemoTests;
+			productReference = 8FA74703241E1561005F1923 /* JKPresentationControllerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8FA7470D241E1561005F1923 /* JKPresentationControllerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FA7471D241E1561005F1923 /* Build configuration list for PBXNativeTarget "JKPresentationControllerDemoUITests" */;
+			buildPhases = (
+				8FA7470A241E1561005F1923 /* Sources */,
+				8FA7470B241E1561005F1923 /* Frameworks */,
+				8FA7470C241E1561005F1923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FA74710241E1561005F1923 /* PBXTargetDependency */,
+			);
+			name = JKPresentationControllerDemoUITests;
+			productName = JKPresentationControllerDemoUITests;
+			productReference = 8FA7470E241E1561005F1923 /* JKPresentationControllerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FA746DC241E155E005F1923 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = xuequan;
+				TargetAttributes = {
+					8FA746E3241E155E005F1923 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					8FA74702241E1561005F1923 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 8FA746E3241E155E005F1923;
+					};
+					8FA7470D241E1561005F1923 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 8FA746E3241E155E005F1923;
+					};
+				};
+			};
+			buildConfigurationList = 8FA746DF241E155E005F1923 /* Build configuration list for PBXProject "JKPresentationControllerDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8FA746DB241E155E005F1923;
+			productRefGroup = 8FA746E5241E155E005F1923 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FA746E3241E155E005F1923 /* JKPresentationControllerDemo */,
+				8FA74702241E1561005F1923 /* JKPresentationControllerDemoTests */,
+				8FA7470D241E1561005F1923 /* JKPresentationControllerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FA746E2241E155E005F1923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA746FA241E1561005F1923 /* Assets.xcassets in Resources */,
+				8FA746FD241E1561005F1923 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FA74701241E1561005F1923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FA7470C241E1561005F1923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B4E4460DE1914E2F381ED840 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JKPresentationControllerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCCD378E487ACB18DF414110 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JKPresentationControllerDemo/Pods-JKPresentationControllerDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JKPresentationControllerDemo/Pods-JKPresentationControllerDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JKPresentationControllerDemo/Pods-JKPresentationControllerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FA746E0241E155E005F1923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA74727241E4EF3005F1923 /* JKBroadcastBeginAlertViewController.swift in Sources */,
+				8FA746EE241E155E005F1923 /* FDEMessageViewController.swift in Sources */,
+				8FA746E8241E155E005F1923 /* AppDelegate.swift in Sources */,
+				8FA746F0241E155E005F1923 /* FDEMineViewController.swift in Sources */,
+				8FA746F8241E155E005F1923 /* DLog.swift in Sources */,
+				8FA746F6241E155E005F1923 /* FDENavigationController.swift in Sources */,
+				8FA746F2241E155E005F1923 /* FDETabBarController.swift in Sources */,
+				8FA746F4241E155E005F1923 /* FDEBaseViewController.swift in Sources */,
+				8FA746EA241E155E005F1923 /* FDEHomeViewController.swift in Sources */,
+				8FA74721241E2E6C005F1923 /* JKPublishCommentAlertViewController.swift in Sources */,
+				8FA74729241E5792005F1923 /* JKPushAlertViewController.swift in Sources */,
+				8FA74723241E2E94005F1923 /* UIView+Corner.swift in Sources */,
+				8FA746EC241E155E005F1923 /* FDEDetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FA746FF241E1561005F1923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA74708241E1561005F1923 /* JKPresentationControllerDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FA7470A241E1561005F1923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA74713241E1561005F1923 /* JKPresentationControllerDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FA74705241E1561005F1923 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FA746E3241E155E005F1923 /* JKPresentationControllerDemo */;
+			targetProxy = 8FA74704241E1561005F1923 /* PBXContainerItemProxy */;
+		};
+		8FA74710241E1561005F1923 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FA746E3241E155E005F1923 /* JKPresentationControllerDemo */;
+			targetProxy = 8FA7470F241E1561005F1923 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8FA746FB241E1561005F1923 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FA746FC241E1561005F1923 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8FA74715241E1561005F1923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8FA74716241E1561005F1923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8FA74718241E1561005F1923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23C1FD4ABCCCA1634EAAAF42 /* Pods-JKPresentationControllerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23DWX64F7P;
+				INFOPLIST_FILE = JKPresentationControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xq.www.JKPresentationControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FA74719241E1561005F1923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7120BC5386903570DB63CB98 /* Pods-JKPresentationControllerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23DWX64F7P;
+				INFOPLIST_FILE = JKPresentationControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xq.www.JKPresentationControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8FA7471B241E1561005F1923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23DWX64F7P;
+				INFOPLIST_FILE = JKPresentationControllerDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xq.www.JKPresentationControllerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKPresentationControllerDemo.app/JKPresentationControllerDemo";
+			};
+			name = Debug;
+		};
+		8FA7471C241E1561005F1923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23DWX64F7P;
+				INFOPLIST_FILE = JKPresentationControllerDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xq.www.JKPresentationControllerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKPresentationControllerDemo.app/JKPresentationControllerDemo";
+			};
+			name = Release;
+		};
+		8FA7471E241E1561005F1923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23DWX64F7P;
+				INFOPLIST_FILE = JKPresentationControllerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xq.www.JKPresentationControllerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JKPresentationControllerDemo;
+			};
+			name = Debug;
+		};
+		8FA7471F241E1561005F1923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23DWX64F7P;
+				INFOPLIST_FILE = JKPresentationControllerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xq.www.JKPresentationControllerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JKPresentationControllerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FA746DF241E155E005F1923 /* Build configuration list for PBXProject "JKPresentationControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FA74715241E1561005F1923 /* Debug */,
+				8FA74716241E1561005F1923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FA74717241E1561005F1923 /* Build configuration list for PBXNativeTarget "JKPresentationControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FA74718241E1561005F1923 /* Debug */,
+				8FA74719241E1561005F1923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FA7471A241E1561005F1923 /* Build configuration list for PBXNativeTarget "JKPresentationControllerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FA7471B241E1561005F1923 /* Debug */,
+				8FA7471C241E1561005F1923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FA7471D241E1561005F1923 /* Build configuration list for PBXNativeTarget "JKPresentationControllerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FA7471E241E1561005F1923 /* Debug */,
+				8FA7471F241E1561005F1923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FA746DC241E155E005F1923 /* Project object */;
+}
