@@ -19,7 +19,15 @@ alert.jk_show(withViewController: self, animated: true) {
 ```
 弹出时默认是淡入淡出效果,可根据需要自己实现其他动画.
 
+关闭弹窗:
+```
+self.jk_hide(withAnimated: true) { [unowned self] in
+
+}
+```
+
 示例如下:
+
 ![](https://raw.githubusercontent.com/xq-120/cloudImage/master/pictures/20200315223637.png)
 
 ![](https://raw.githubusercontent.com/xq-120/cloudImage/master/pictures/20200315223713.png)
