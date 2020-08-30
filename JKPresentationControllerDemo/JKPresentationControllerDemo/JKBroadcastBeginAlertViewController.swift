@@ -151,9 +151,7 @@ class JKBroadcastBeginAlertViewController: FDEBaseViewController, UIGestureRecog
     }
     
     @objc func sureBtnDidClicked(sender: UIButton) {
-        self.jk_hide(withAnimated: true) { [unowned self] in
-            self.sureBtnDidClickedBlk?()
-        }
+        self.sureBtnDidClickedBlk?()
     }
     
     @objc private func cancelBtnDidClicked(sender: UIButton) {
@@ -241,3 +239,4 @@ class JKBroadcastBeginAlertViewController: FDEBaseViewController, UIGestureRecog
         }
     }
 }
+

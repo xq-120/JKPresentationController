@@ -24,6 +24,8 @@
 		8FA74723241E2E94005F1923 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA74722241E2E94005F1923 /* UIView+Corner.swift */; };
 		8FA74727241E4EF3005F1923 /* JKBroadcastBeginAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA74726241E4EF3005F1923 /* JKBroadcastBeginAlertViewController.swift */; };
 		8FA74729241E5792005F1923 /* JKPushAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA74728241E5792005F1923 /* JKPushAlertViewController.swift */; };
+		8FD398F824FB43C600BAA9B7 /* UIViewController+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD398F624FB43C500BAA9B7 /* UIViewController+TopViewController.swift */; };
+		8FD398F924FB43C600BAA9B7 /* JKPresentContainerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD398F724FB43C600BAA9B7 /* JKPresentContainerNavigationController.swift */; };
 		C975B14A037832DF58E3FB69 /* Pods_JKPresentationControllerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9500D80BA3922A8E6A5658B0 /* Pods_JKPresentationControllerDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		8FA74722241E2E94005F1923 /* UIView+Corner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
 		8FA74726241E4EF3005F1923 /* JKBroadcastBeginAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKBroadcastBeginAlertViewController.swift; sourceTree = "<group>"; };
 		8FA74728241E5792005F1923 /* JKPushAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKPushAlertViewController.swift; sourceTree = "<group>"; };
+		8FD398F624FB43C500BAA9B7 /* UIViewController+TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TopViewController.swift"; sourceTree = "<group>"; };
+		8FD398F724FB43C600BAA9B7 /* JKPresentContainerNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKPresentContainerNavigationController.swift; sourceTree = "<group>"; };
 		9500D80BA3922A8E6A5658B0 /* Pods_JKPresentationControllerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKPresentationControllerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +150,8 @@
 				8FA74720241E2E6C005F1923 /* JKPublishCommentAlertViewController.swift */,
 				8FA74726241E4EF3005F1923 /* JKBroadcastBeginAlertViewController.swift */,
 				8FA74722241E2E94005F1923 /* UIView+Corner.swift */,
+				8FD398F624FB43C500BAA9B7 /* UIViewController+TopViewController.swift */,
+				8FD398F724FB43C600BAA9B7 /* JKPresentContainerNavigationController.swift */,
 				8FA746F9241E1561005F1923 /* Assets.xcassets */,
 				8FA746FB241E1561005F1923 /* LaunchScreen.storyboard */,
 				8FA746FE241E1561005F1923 /* Info.plist */,
@@ -362,8 +368,10 @@
 				8FA746F2241E155E005F1923 /* FDETabBarController.swift in Sources */,
 				8FA746F4241E155E005F1923 /* FDEBaseViewController.swift in Sources */,
 				8FA746EA241E155E005F1923 /* FDEHomeViewController.swift in Sources */,
+				8FD398F924FB43C600BAA9B7 /* JKPresentContainerNavigationController.swift in Sources */,
 				8FA74721241E2E6C005F1923 /* JKPublishCommentAlertViewController.swift in Sources */,
 				8FA74729241E5792005F1923 /* JKPushAlertViewController.swift in Sources */,
+				8FD398F824FB43C600BAA9B7 /* UIViewController+TopViewController.swift in Sources */,
 				8FA74723241E2E94005F1923 /* UIView+Corner.swift in Sources */,
 				8FA746EC241E155E005F1923 /* FDEDetailViewController.swift in Sources */,
 			);

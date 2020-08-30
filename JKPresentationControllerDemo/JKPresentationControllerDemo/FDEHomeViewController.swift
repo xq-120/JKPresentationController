@@ -8,6 +8,7 @@
 
 import UIKit
 import JKPresentationController
+import FDFullscreenPopGesture
 
 class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -39,7 +40,7 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
     func loadData() {
         dataList.removeAll()
         
-        let situations = ["高度固定弹窗,viewController不全屏", "高度固定弹窗,viewController全屏", "高度自适应弹窗,viewController全屏"]
+        let situations = ["高度固定弹窗,viewController不全屏", "高度固定弹窗,viewController全屏", "高度自适应弹窗,viewController全屏", "present 带 navigation的弹窗"]
         dataList.append(contentsOf: situations)
     }
 
@@ -59,6 +60,10 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
         if indexPath.row == 0 {
+            let base: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController
+            print(base!)
+            let top = UIViewController.topViewController()
+            print(top!)
             let alert = JKPushAlertViewController.init()
             alert.jk_show(withViewController: self, animated: true) {
                 
@@ -70,12 +75,30 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
             }
         } else if indexPath.row == 2 {
             let alert = JKBroadcastBeginAlertViewController.init()
-            alert.jk_show(withAnimated: true) {
-                
+            alert.jk_show(withViewController: self, animated: true) {
+
+            }
+            alert.sureBtnDidClickedBlk = { [unowned self] in
+                let detail = FDEDetailViewController.init()
+                detail.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(detail, animated: true)
             }
         } else if indexPath.row == 3 {
-            
+            let alert = JKBroadcastBeginAlertViewController.init()
+            alert.fd_prefersNavigationBarHidden = true
+            alert.sureBtnDidClickedBlk = { [unowned alert] in
+                let detail = FDEDetailViewController.init()
+                detail.hidesBottomBarWhenPushed = true
+                alert.navigationController?.pushViewController(detail, animated: true)
+            }
+            let nav = UINavigationController.init(rootViewController: alert)
+            nav.jk_presentAnimation = JKFadeInPresentAnimation.init()
+            nav.jk_dismissAnimation = JKFadeOutDismissAnimation.init()
+            nav.jk_show(withViewController: self, animated: true) {
+                
+            }
         }
     }
 }
+
 
