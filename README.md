@@ -25,6 +25,24 @@ alert.jk_show(withViewController: self, animated: true) {
 
 }
 ```
+弹出带navigation的弹窗：
+
+```swift
+let alert = JKBroadcastBeginAlertViewController.init()
+alert.fd_prefersNavigationBarHidden = true
+alert.sureBtnDidClickedBlk = { [unowned alert] in
+    let detail = FDEDetailViewController.init()
+    detail.hidesBottomBarWhenPushed = true
+    alert.navigationController?.pushViewController(detail, animated: true)
+}
+let nav = UINavigationController.init(rootViewController: alert)
+nav.jk_presentAnimation = JKFadeInPresentAnimation.init()
+nav.jk_dismissAnimation = JKFadeOutDismissAnimation.init()
+nav.jk_show(withViewController: self, animated: true) {
+
+}
+```
+
 弹出时默认是淡入淡出效果,可根据需要自己实现其他动画.
 
 关闭弹窗:
@@ -41,3 +59,6 @@ self.jk_hide(withAnimated: true) { [unowned self] in
 <img src="https://raw.githubusercontent.com/xq-120/cloudImage/master/pictures/20200315223713.png" alt="图片替换文本" width="200" height="400" align="middle" />
 
 <img src="https://raw.githubusercontent.com/xq-120/cloudImage/master/pictures/20200315223732.png" alt="图片替换文本" width="200" height="400" align="middle" />
+
+<img src="https://raw.githubusercontent.com/xq-120/cloudImage/master/pictures/%E5%B8%A6%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%BC%B9%E7%AA%97.gif" style="zoom:80%;" />
+
