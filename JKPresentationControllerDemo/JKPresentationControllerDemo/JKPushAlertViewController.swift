@@ -75,7 +75,11 @@ class JKPushAlertViewController: FDEBaseViewController {
     @objc var closeBtnDidClickedBlk: (() -> Void)?
     
     override var jk_shouldDismissOnTouchBackView: Bool {
-        return false
+        return true
+    }
+    
+    deinit {
+        
     }
     
     init() {
@@ -95,22 +99,41 @@ class JKPushAlertViewController: FDEBaseViewController {
         makeSubviewsConstraints()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        print("viewWillLayoutSubviews view.frame:\(view.frame)")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        print("viewDidLayoutSubviews view.frame:\(view.frame)")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     @objc func closeBtnDidClicked(sender: UIButton) -> Void {
         jk_hide()
     }
     
     @objc func confirmBtnDidClicked(sender: UIButton) -> Void {
-        self.jk_hide(withAnimated: true) { [unowned self] in
+        if self.confirmBtnDidClickedBlk != nil {
+            self.confirmBtnDidClickedBlk?()
+        } else {
             let settingsUrl = URL.init(string: UIApplication.openSettingsURLString)
             if settingsUrl != nil && UIApplication.shared.canOpenURL(settingsUrl!) {
                 UIApplication.shared.open(settingsUrl!, completionHandler: nil)
             }
-            self.confirmBtnDidClickedBlk?()
         }
     }
     
     func initialSubviews() {
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.red
         view.layer.cornerRadius = 6
         
         view.addSubview(lightRedBgView)

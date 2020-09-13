@@ -40,7 +40,7 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
     func loadData() {
         dataList.removeAll()
         
-        let situations = ["高度固定弹窗,viewController不全屏", "高度固定弹窗,viewController全屏", "高度自适应弹窗,viewController全屏", "present 带 navigation的弹窗"]
+        let situations = ["高度固定弹窗,viewController不全屏", "高度固定弹窗,viewController全屏", "高度自适应弹窗,viewController全屏", "present 带 navigation的弹窗", "在弹窗上present vc", "系统"]
         dataList.append(contentsOf: situations)
     }
 
@@ -57,11 +57,21 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            self.handleClickCell(at: indexPath)
+        }
+    }
+    
+    func handleClickCell(at indexPath: IndexPath) {
+        print("点击 cell")
         if indexPath.row == 0 {
-            let base: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController
-            print(base!)
+            let root: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController
+            print(root!)
             let top = UIViewController.topViewController()
             print(top!)
             let alert = JKPushAlertViewController.init()
@@ -97,6 +107,79 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
             nav.jk_show(withViewController: self, animated: true) {
                 
             }
+        } else if indexPath.row == 4 {
+            let alert = JKPushAlertViewController.init()
+            alert.jk_show(withViewController: self, animated: true) {
+                
+            }
+            alert.confirmBtnDidClickedBlk = { [weak alert, weak self] in
+                let detail = FDEDetailViewController.init()
+                detail.modalPresentationStyle = .overFullScreen //不能是fullScreen否则alert会变大
+                alert?.present(detail, animated: true) {
+                    print(detail.presentingViewController)
+                }
+            }
+        } else if indexPath.row == 5 {
+//            let root: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController
+//            let detail = FDEDetailViewController.init()
+//            detail.modalPresentationStyle = .fullScreen
+//            self.present(detail, animated: true) { [weak detail, weak self] in
+//                print(root?.presentingViewController) //nil
+//                print(root?.presentedViewController)    //FDEDetailViewController: 0x159e331e0
+//                print(self?.presentingViewController) //nil
+//                print(self?.presentedViewController)    //FDEDetailViewController: 0x159e331e0
+//                print(detail?.presentingViewController) //FDETabBarController: 0x159d05c80
+//                print(detail?.presentedViewController) //nil
+//            }
+            
+//            let root: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController
+//            let detail = FDEDetailViewController.init()
+//            detail.modalPresentationStyle = .currentContext
+//            self.present(detail, animated: true) { [weak detail, weak self] in
+//                print(root?.presentingViewController) //nil
+//                print(root?.presentedViewController)    //nil
+//                print(self?.presentingViewController) //nil
+//                print(self?.presentedViewController)    //FDEDetailViewController: 0x159e331e0
+//                print(detail?.presentingViewController) //FDENavigationController: 0x101026a00
+//                print(detail?.presentedViewController) //nil
+//            }
+            
+            let root: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController
+            let detail = FDEDetailViewController.init()
+            detail.modalPresentationStyle = .currentContext
+            self.definesPresentationContext = true //默认是false，但在一些系统容器vc中默认是true
+            self.present(detail, animated: true) { [weak detail, weak self] in
+                print(root?.presentingViewController) //nil
+                print(root?.presentedViewController)    //nil
+                print(self?.presentingViewController) //nil
+                print(self?.presentedViewController)    //FDEDetailViewController: 0x159e331e0
+                print(detail?.presentingViewController) //FDEHomeViewController: 0x100e08890
+                print(detail?.presentedViewController) //nil
+            }
+            
+//            let root: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController
+//            let detail = FDEDetailViewController.init()
+//            detail.modalPresentationStyle = .fullScreen
+//            root?.present(detail, animated: true) { [weak detail, weak self] in
+//                print(root?.presentingViewController)  //nil
+//                print(root?.presentedViewController)    //FDEDetailViewController: 0x100f48f80
+//                print(self?.presentingViewController)  //nil
+//                print(self?.presentedViewController)    //FDEDetailViewController: 0x100f48f80
+//                print(detail?.presentingViewController) //FDETabBarController: 0x1018084a0
+//                print(detail?.presentedViewController) //nil
+//            }
+            
+//            let root: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController
+//            let detail = FDEDetailViewController.init()
+//            detail.modalPresentationStyle = .currentContext
+//            root?.present(detail, animated: true) { [weak detail, weak self] in
+//                print(root?.presentingViewController)  //nil
+//                print(root?.presentedViewController)    //FDEDetailViewController: 0x100f48f80
+//                print(self?.presentingViewController)  //nil
+//                print(self?.presentedViewController)    //FDEDetailViewController: 0x100f48f80
+//                print(detail?.presentingViewController) //FDETabBarController: 0x1018084a0
+//                print(detail?.presentedViewController) //nil
+//            }
         }
     }
 }

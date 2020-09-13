@@ -5,20 +5,23 @@ PODS:
 
 DEPENDENCIES:
   - FDFullscreenPopGesture (~> 1.1)
-  - JKPresentationController (~> 1.0.0)
+  - JKPresentationController (from `../`)
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - FDFullscreenPopGesture
-    - JKPresentationController
     - SnapKit
+
+EXTERNAL SOURCES:
+  JKPresentationController:
+    :path: "../"
 
 SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   JKPresentationController: f8886b6ce8a803d8a54711ffaddc94d10cd48fe2
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 7ebfe3709da3069b164d04cf59b9e234245849c5
+PODFILE CHECKSUM: 06f30b0a6d37a8dc98955138d82143fdc7bacc87
 
 COCOAPODS: 1.9.1
