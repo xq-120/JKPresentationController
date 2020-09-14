@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
-  JKPresentationController: f8886b6ce8a803d8a54711ffaddc94d10cd48fe2
+  JKPresentationController: 67f2b12c70d986b1b3deac6add77ffdde3f42798
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
 PODFILE CHECKSUM: 06f30b0a6d37a8dc98955138d82143fdc7bacc87

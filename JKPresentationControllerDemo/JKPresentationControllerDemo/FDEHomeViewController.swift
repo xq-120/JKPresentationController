@@ -40,7 +40,7 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
     func loadData() {
         dataList.removeAll()
         
-        let situations = ["高度固定弹窗,viewController不全屏", "高度固定弹窗,viewController全屏", "高度自适应弹窗,viewController全屏", "present 带 navigation的弹窗", "在弹窗上present vc", "系统"]
+        let situations = ["高度固定弹窗,viewController不全屏", "高度固定弹窗,viewController全屏", "高度自适应弹窗,viewController全屏", "present 带 navigation的弹窗", "在弹窗上present vc", "高度自适应弹窗,viewController全屏,在弹窗上present vc", "系统"]
         dataList.append(contentsOf: situations)
     }
 
@@ -120,6 +120,18 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
                 }
             }
         } else if indexPath.row == 5 {
+            let alert = JKBroadcastBeginAlertViewController.init()
+            alert.jk_show(withViewController: self, animated: true) {
+
+            }
+            alert.sureBtnDidClickedBlk = {[weak alert, weak self] in
+                let detail = FDEDetailViewController.init()
+                detail.modalPresentationStyle = .fullScreen
+                alert?.present(detail, animated: true) {
+                    print(detail.presentingViewController)
+                }
+            }
+        } else if indexPath.row == 6 {
 //            let root: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController
 //            let detail = FDEDetailViewController.init()
 //            detail.modalPresentationStyle = .fullScreen
@@ -146,7 +158,7 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
             
             let root: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController
             let detail = FDEDetailViewController.init()
-            detail.modalPresentationStyle = .currentContext
+            detail.modalPresentationStyle = .overCurrentContext
             self.definesPresentationContext = true //默认是false，但在一些系统容器vc中默认是true
             self.present(detail, animated: true) { [weak detail, weak self] in
                 print(root?.presentingViewController) //nil
