@@ -15,7 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL shouldDismissOnTouchBackView;
 
-@property (nonatomic, readonly, strong) UIView *containerView;
+@property (nonatomic, strong) UIButton *backView;
+@property (nonatomic, readonly, strong) UIView *contentView;
+
+- (instancetype)init;
 
 @end
 

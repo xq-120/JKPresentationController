@@ -34,13 +34,16 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
         self.navigationItem.title = "首页"
         
         view.addSubview(tableView)
-        tableView.frame = view.frame
+        
+        tableView.snp.makeConstraints { (maker) in
+            maker.edges.equalTo(self.view).inset(UIEdgeInsets.zero)
+        }
     }
 
     func loadData() {
         dataList.removeAll()
         
-        let situations = ["高度固定弹窗,viewController不全屏", "高度固定弹窗,viewController全屏", "高度自适应弹窗,viewController全屏", "present 带 navigation的弹窗", "在弹窗上present vc", "高度自适应弹窗,viewController全屏,在弹窗上present vc", "系统"]
+        let situations = ["高度固定弹窗,viewController不全屏", "高度固定弹窗,viewController全屏", "高度自适应弹窗,viewController全屏", "present 带 navigation的弹窗", "在弹窗上present vc", "高度自适应弹窗,viewController全屏,在弹窗上present vc", "系统", "继承baseAlert", "下上"]
         dataList.append(contentsOf: situations)
     }
 
@@ -193,6 +196,30 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
 //                print(detail?.presentingViewController) //FDETabBarController: 0x1018084a0
 //                print(detail?.presentedViewController) //nil
 //            }
+        } else if indexPath.row == 7 {
+            let alert = ZAEAuditionEndBuyAlertViewController.init()
+            alert.jk_show(withViewController: self, animated: true) {
+
+            }
+            alert.buyBtnDidClickedBlk = {[weak alert, weak self] in
+                let detail = FDEDetailViewController.init()
+                detail.modalPresentationStyle = .fullScreen
+                alert?.present(detail, animated: true) { [weak detail] in
+                    print(detail?.presentingViewController ?? "")
+                }
+            }
+        } else if indexPath.row == 8 {
+            let alert = ZAESupportGroupVoteAlertViewController.init()
+            alert.jk_show(withViewController: self, animated: true) {
+
+            }
+            alert.confirmBtnDidClickedBlk = {[weak alert, weak self] selectedItem  in
+                let detail = FDEDetailViewController.init()
+                detail.modalPresentationStyle = .fullScreen
+                alert?.present(detail, animated: true) { [weak detail] in
+                    print(detail?.presentingViewController ?? "")
+                }
+            }
         }
     }
 }

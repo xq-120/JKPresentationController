@@ -11,16 +11,19 @@
 
 @interface JKBaseAlertViewController ()
 
-@property (nonatomic, strong) UIButton *backView;
-
 @end
 
 @implementation JKBaseAlertViewController
+@synthesize contentView = _contentView;
+
+- (UIColor *)jk_backViewBgColor {
+    return UIColor.clearColor;
+}
 
 - (instancetype)init {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
-        
+        self.shouldDismissOnTouchBackView = YES;
     }
     return self;
 }
@@ -32,7 +35,7 @@
     self.backView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
     
     [self.view addSubview:self.backView];
-    [self.view addSubview:self.containerView];
+    [self.view addSubview:self.contentView];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -63,13 +66,13 @@
     return  _backView;
 }
 
-- (UIView *)containerView {
-    if (_containerView == nil) {
+- (UIView *)contentView {
+    if (_contentView == nil) {
         UIView *view = [UIView new];
         view.backgroundColor = [UIColor whiteColor];
-        _containerView = view;
+        _contentView = view;
     }
-    return _containerView;
+    return _contentView;
 }
 
 @end
