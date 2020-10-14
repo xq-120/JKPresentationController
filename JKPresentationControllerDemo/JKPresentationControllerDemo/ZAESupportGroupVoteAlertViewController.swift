@@ -72,16 +72,22 @@ class ZAESupportGroupVoteAlertViewController: JKBaseAlertViewController, UIColle
     
     override init() {
         super.init()
-        self.jk_presentAnimation = JKLinearUpPresentAnimation.init()
-        self.jk_dismissAnimation = JKLinearDownDismissAnimation.init()
+//        self.jk_presentAnimation = JKLinearUpPresentAnimation.init()
+//        self.jk_dismissAnimation = JKLinearDownDismissAnimation.init()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override var jk_backViewBgColor: UIColor {
+        return UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.backViewBgColor = UIColor.clear
 
         initializeSubviews()
         makeSubviewContraints()
@@ -142,9 +148,6 @@ class ZAESupportGroupVoteAlertViewController: JKBaseAlertViewController, UIColle
             maker.leading.trailing.bottom.equalTo(self.contentView)
             maker.height.equalTo(74)
         }
-        
-        view.layoutIfNeeded()
-        contentView.clipsToBounds = true
     }
     
     @objc func confirmBtnDidClicked(sender: Any?) -> Void {

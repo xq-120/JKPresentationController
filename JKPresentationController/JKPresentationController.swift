@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class JKPresentationController: UIPresentationController {
     
     deinit {
