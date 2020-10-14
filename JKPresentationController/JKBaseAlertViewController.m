@@ -6,7 +6,8 @@
 //
 
 #import "JKBaseAlertViewController.h"
-#import <JKPresentationController-Swift.h>
+//OC使用Swift需要导入#import <xxx/xxx-Swift.h>
+#import <JKPresentationController/JKPresentationController-Swift.h>
 
 @interface JKBaseAlertViewController ()
 
@@ -30,7 +31,7 @@
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-//    self.view.frame = self.jk_presentedViewFrame;
+    self.view.frame = self.jk_presentedViewFrame;
 }
 
 

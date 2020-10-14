@@ -11,7 +11,7 @@ import UIKit
 class JKPresentationController: UIPresentationController {
     
     deinit {
-
+        
     }
     
     @objc lazy var backView: UIView = {

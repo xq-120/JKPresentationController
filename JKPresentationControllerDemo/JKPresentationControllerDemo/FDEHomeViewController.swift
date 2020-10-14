@@ -114,7 +114,8 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
             }
             alert.confirmBtnDidClickedBlk = { [weak alert, weak self] in
                 let detail = FDEDetailViewController.init()
-                detail.modalPresentationStyle = .overFullScreen //不能是fullScreen否则alert会变大
+//                detail.modalPresentationStyle = .overFullScreen //不能是fullScreen否则alert会变大
+                detail.modalPresentationStyle = .fullScreen
                 alert?.present(detail, animated: true) {
                     print(detail.presentingViewController)
                 }

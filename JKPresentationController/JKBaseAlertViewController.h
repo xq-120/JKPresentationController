@@ -11,6 +11,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JKBaseAlertViewController : UIViewController
 
+@property (nonatomic, strong) UIColor *backViewBgColor;
+
+@property (nonatomic, strong) UIButton *backView;
+
+@property (nonatomic, assign) BOOL shouldDismissOnTouchBackView;
+
+@property (nonatomic, strong) UIView *containerView;
+
 @end
 
 NS_ASSUME_NONNULL_END
