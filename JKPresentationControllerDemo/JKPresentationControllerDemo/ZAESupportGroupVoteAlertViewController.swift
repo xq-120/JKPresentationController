@@ -73,7 +73,7 @@ class ZAESupportGroupVoteAlertViewController: JKBaseAlertViewController, UIColle
     override init() {
         super.init()
         self.jk_presentAnimation = JKLinearUpPresentAnimation.init()
-        self.jk_dismissAnimation = JKLinearDownPresentAnimation.init()
+        self.jk_dismissAnimation = JKLinearDownDismissAnimation.init()
     }
     
     required init?(coder aDecoder: NSCoder) {

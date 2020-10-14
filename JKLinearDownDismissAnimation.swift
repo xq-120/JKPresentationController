@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class JKLinearDownPresentAnimation: NSObject, UIViewControllerAnimatedTransitioning {
+public class JKLinearDownDismissAnimation: NSObject, UIViewControllerAnimatedTransitioning {
     public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.25
     }
