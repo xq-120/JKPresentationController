@@ -58,7 +58,7 @@ extension UIViewController: UIViewControllerTransitioningDelegate {
         self.jk_dismissAnimation = dismissAnimation
     }
     
-    // 弹出页面,在新的window上弹出.call hide() to close.
+    // 弹出页面,在新的window上弹出.call jk_hide() to close.
     @objc public func jk_show(withAnimated animated: Bool = true, completion: (() -> Void)? = nil) {
         self.modalPresentationStyle = .custom
         self.transitioningDelegate = self
@@ -66,7 +66,7 @@ extension UIViewController: UIViewControllerTransitioningDelegate {
         self.jk_alertWindow.rootViewController?.present(self, animated: animated, completion: completion)
     }
     
-    // 弹出页面,在viewController上弹出.call hide() to close.
+    // 弹出页面,在viewController上弹出.call jk_hide() to close.
     @objc public func jk_show(withViewController viewController: UIViewController, animated: Bool = true, completion: (() -> Void)? = nil) {
         self.modalPresentationStyle = .custom
         self.transitioningDelegate = self

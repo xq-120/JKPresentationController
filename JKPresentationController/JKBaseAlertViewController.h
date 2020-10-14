@@ -13,11 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIColor *backViewBgColor;
 
-@property (nonatomic, strong) UIButton *backView;
-
 @property (nonatomic, assign) BOOL shouldDismissOnTouchBackView;
 
-@property (nonatomic, strong) UIView *containerView;
+@property (nonatomic, readonly, strong) UIView *containerView;
 
 @end
 
