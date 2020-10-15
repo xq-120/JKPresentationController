@@ -10,6 +10,9 @@ import UIKit
 import SnapKit
 import JKPresentationController
 
+/**
+ 高度固定弹窗
+ */
 class JKPublishCommentAlertViewController: JKBaseAlertViewController {
     
     lazy var lineView: UIView = {

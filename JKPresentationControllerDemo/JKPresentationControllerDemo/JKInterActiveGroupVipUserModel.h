@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZAEInterActiveGroupVipUserModel : NSObject
+@interface JKInterActiveGroupVipUserModel : NSObject
 
 @property (nonatomic, assign) NSInteger userID; ///< 用户ID
 @property (nonatomic, copy) NSString *nickname; ///< 昵称

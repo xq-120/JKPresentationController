@@ -14,7 +14,7 @@ let kScreenW = UIScreen.main.bounds.width
 /**
  高度自适应弹窗
  */
-class JKSupportGroupVoteAlertViewController: JKBaseAlertViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIGestureRecognizerDelegate {
+class JKSupportGroupVoteAlertViewController: JKBaseAlertViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     @objc lazy var titleLabel: UILabel = {
         let label = UILabel.init()
@@ -68,10 +68,10 @@ class JKSupportGroupVoteAlertViewController: JKBaseAlertViewController, UICollec
         return collectionView
     }()
     
-    var dataList: [ZAEInterActiveGroupVipUserModel] = []
-    var selectedItem: ZAEInterActiveGroupVipUserModel?
+    var dataList: [JKInterActiveGroupVipUserModel] = []
+    var selectedItem: JKInterActiveGroupVipUserModel?
     
-    @objc var confirmBtnDidClickedBlk: ((ZAEInterActiveGroupVipUserModel) -> Void)?
+    @objc var confirmBtnDidClickedBlk: ((JKInterActiveGroupVipUserModel) -> Void)?
     
     override init() {
         super.init()
@@ -88,7 +88,7 @@ class JKSupportGroupVoteAlertViewController: JKBaseAlertViewController, UICollec
         makeSubviewContraints()
         
         for i in 0..<7 {
-            let item = ZAEInterActiveGroupVipUserModel.init()
+            let item = JKInterActiveGroupVipUserModel.init()
             item.avatar = "character_menu_4"
             item.nickname = "第\(i)个"
             item.userID = i
@@ -97,15 +97,7 @@ class JKSupportGroupVoteAlertViewController: JKBaseAlertViewController, UICollec
         self.collectionView.reloadData()
     }
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        let position = touch.location(in: nil)
-        if self.contentView.frame.contains(position) {
-            return false
-        }
-        return true
-    }
-    
-    @objc func configure(list: [ZAEInterActiveGroupVipUserModel]) -> Void {
+    @objc func configure(list: [JKInterActiveGroupVipUserModel]) -> Void {
         self.dataList = list
         self.collectionView.reloadData()
     }

@@ -27,9 +27,9 @@
 		8FA74729241E5792005F1923 /* JKPushAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA74728241E5792005F1923 /* JKPushAlertViewController.swift */; };
 		8FD398F824FB43C600BAA9B7 /* UIViewController+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD398F624FB43C500BAA9B7 /* UIViewController+TopViewController.swift */; };
 		8FD398F924FB43C600BAA9B7 /* JKPresentContainerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD398F724FB43C600BAA9B7 /* JKPresentContainerNavigationController.swift */; };
-		8FD7B2D325373C5700BCD77C /* ZAEAuditionEndBuyAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7B2D225373C5700BCD77C /* ZAEAuditionEndBuyAlertViewController.swift */; };
-		8FD7B2D82537461100BCD77C /* ZAESupportGroupVoteAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7B2D72537461100BCD77C /* ZAESupportGroupVoteAlertViewController.swift */; };
-		8FD7B2DF2537464700BCD77C /* ZAEInterActiveGroupVipUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7B2DE2537464700BCD77C /* ZAEInterActiveGroupVipUserModel.m */; };
+		8FD7B2D325373C5700BCD77C /* JKAuditionEndBuyAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7B2D225373C5700BCD77C /* JKAuditionEndBuyAlertViewController.swift */; };
+		8FD7B2D82537461100BCD77C /* JKSupportGroupVoteAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7B2D72537461100BCD77C /* JKSupportGroupVoteAlertViewController.swift */; };
+		8FD7B2DF2537464700BCD77C /* JKInterActiveGroupVipUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7B2DE2537464700BCD77C /* JKInterActiveGroupVipUserModel.m */; };
 		C975B14A037832DF58E3FB69 /* Pods_JKPresentationControllerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9500D80BA3922A8E6A5658B0 /* Pods_JKPresentationControllerDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,11 +79,11 @@
 		8FA74728241E5792005F1923 /* JKPushAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKPushAlertViewController.swift; sourceTree = "<group>"; };
 		8FD398F624FB43C500BAA9B7 /* UIViewController+TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TopViewController.swift"; sourceTree = "<group>"; };
 		8FD398F724FB43C600BAA9B7 /* JKPresentContainerNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKPresentContainerNavigationController.swift; sourceTree = "<group>"; };
-		8FD7B2D225373C5700BCD77C /* ZAEAuditionEndBuyAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZAEAuditionEndBuyAlertViewController.swift; sourceTree = "<group>"; };
-		8FD7B2D72537461100BCD77C /* ZAESupportGroupVoteAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZAESupportGroupVoteAlertViewController.swift; sourceTree = "<group>"; };
+		8FD7B2D225373C5700BCD77C /* JKAuditionEndBuyAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKAuditionEndBuyAlertViewController.swift; sourceTree = "<group>"; };
+		8FD7B2D72537461100BCD77C /* JKSupportGroupVoteAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKSupportGroupVoteAlertViewController.swift; sourceTree = "<group>"; };
 		8FD7B2DC2537464700BCD77C /* JKPresentationControllerDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JKPresentationControllerDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		8FD7B2DD2537464700BCD77C /* ZAEInterActiveGroupVipUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAEInterActiveGroupVipUserModel.h; sourceTree = "<group>"; };
-		8FD7B2DE2537464700BCD77C /* ZAEInterActiveGroupVipUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAEInterActiveGroupVipUserModel.m; sourceTree = "<group>"; };
+		8FD7B2DD2537464700BCD77C /* JKInterActiveGroupVipUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKInterActiveGroupVipUserModel.h; sourceTree = "<group>"; };
+		8FD7B2DE2537464700BCD77C /* JKInterActiveGroupVipUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKInterActiveGroupVipUserModel.m; sourceTree = "<group>"; };
 		9500D80BA3922A8E6A5658B0 /* Pods_JKPresentationControllerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKPresentationControllerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -158,11 +158,11 @@
 				8FA74728241E5792005F1923 /* JKPushAlertViewController.swift */,
 				8FA74720241E2E6C005F1923 /* JKPublishCommentAlertViewController.swift */,
 				8FA74726241E4EF3005F1923 /* JKBroadcastBeginAlertViewController.swift */,
-				8FD7B2D225373C5700BCD77C /* ZAEAuditionEndBuyAlertViewController.swift */,
-				8FD7B2D72537461100BCD77C /* ZAESupportGroupVoteAlertViewController.swift */,
+				8FD7B2D225373C5700BCD77C /* JKAuditionEndBuyAlertViewController.swift */,
+				8FD7B2D72537461100BCD77C /* JKSupportGroupVoteAlertViewController.swift */,
 				8FD398F724FB43C600BAA9B7 /* JKPresentContainerNavigationController.swift */,
-				8FD7B2DD2537464700BCD77C /* ZAEInterActiveGroupVipUserModel.h */,
-				8FD7B2DE2537464700BCD77C /* ZAEInterActiveGroupVipUserModel.m */,
+				8FD7B2DD2537464700BCD77C /* JKInterActiveGroupVipUserModel.h */,
+				8FD7B2DE2537464700BCD77C /* JKInterActiveGroupVipUserModel.m */,
 				8F7B475625381F520042D511 /* FDETaskItem.swift */,
 				8FA746F7241E155E005F1923 /* DLog.swift */,
 				8FA74722241E2E94005F1923 /* UIView+Corner.swift */,
@@ -376,7 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FD7B2D325373C5700BCD77C /* ZAEAuditionEndBuyAlertViewController.swift in Sources */,
+				8FD7B2D325373C5700BCD77C /* JKAuditionEndBuyAlertViewController.swift in Sources */,
 				8FA74727241E4EF3005F1923 /* JKBroadcastBeginAlertViewController.swift in Sources */,
 				8FA746EE241E155E005F1923 /* FDEMessageViewController.swift in Sources */,
 				8FA746E8241E155E005F1923 /* AppDelegate.swift in Sources */,
@@ -389,11 +389,11 @@
 				8FA746EA241E155E005F1923 /* FDEHomeViewController.swift in Sources */,
 				8FD398F924FB43C600BAA9B7 /* JKPresentContainerNavigationController.swift in Sources */,
 				8FA74721241E2E6C005F1923 /* JKPublishCommentAlertViewController.swift in Sources */,
-				8FD7B2DF2537464700BCD77C /* ZAEInterActiveGroupVipUserModel.m in Sources */,
+				8FD7B2DF2537464700BCD77C /* JKInterActiveGroupVipUserModel.m in Sources */,
 				8FA74729241E5792005F1923 /* JKPushAlertViewController.swift in Sources */,
 				8FD398F824FB43C600BAA9B7 /* UIViewController+TopViewController.swift in Sources */,
 				8FA74723241E2E94005F1923 /* UIView+Corner.swift in Sources */,
-				8FD7B2D82537461100BCD77C /* ZAESupportGroupVoteAlertViewController.swift in Sources */,
+				8FD7B2D82537461100BCD77C /* JKSupportGroupVoteAlertViewController.swift in Sources */,
 				8FA746EC241E155E005F1923 /* FDEDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

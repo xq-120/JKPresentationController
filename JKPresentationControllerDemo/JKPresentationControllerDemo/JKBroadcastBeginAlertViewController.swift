@@ -9,15 +9,11 @@
 import UIKit
 import JKPresentationController
 
-class JKBroadcastBeginAlertViewController: FDEBaseViewController, UIGestureRecognizerDelegate {
+/**
+ 宽度固定，高度自适应弹窗
+ */
+class JKBroadcastBeginAlertViewController: JKBaseAlertViewController {
 
-    lazy var containerView: UIView = {
-        let view = UIView.init()
-        view.backgroundColor = UIColor.white
-        view.layer.cornerRadius = 6
-        return view
-    }()
-    
     @objc lazy var titleLabel: UILabel = {
         let label = UILabel.init()
         label.textAlignment = NSTextAlignment.left
@@ -105,8 +101,8 @@ class JKBroadcastBeginAlertViewController: FDEBaseViewController, UIGestureRecog
         
     }
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override init() {
+        super.init()
         self.jk_presentAnimation = JKFadeInPresentAnimation.init()
         self.jk_dismissAnimation = JKFadeOutDismissAnimation.init()
     }
@@ -122,22 +118,6 @@ class JKBroadcastBeginAlertViewController: FDEBaseViewController, UIGestureRecog
         makeSubviewsConstraints()
         
         configureAlert()
-        
-        let tapGes = UITapGestureRecognizer.init(target: self, action: #selector(viewDidClicked(sender:)))
-        tapGes.delegate = self
-        view.addGestureRecognizer(tapGes)
-    }
-    
-    @objc func viewDidClicked(sender: UIView) -> Void {
-        self.jk_hide()
-    }
-    
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        let tappedPoint = gestureRecognizer.location(in: gestureRecognizer.view)
-        if containerView.frame.contains(tappedPoint) {
-            return false
-        }
-        return true
     }
     
     @objc func configureAlert() -> Void {
@@ -162,41 +142,42 @@ class JKBroadcastBeginAlertViewController: FDEBaseViewController, UIGestureRecog
     
     
     func initialSubviews() {
-        view.backgroundColor = UIColor.clear
-        
-        view.addSubview(containerView)
-        containerView.addSubview(closeBtn)
-        containerView.addSubview(titleLabel)
-        containerView.addSubview(lightRedBgView)
+        contentView.backgroundColor = UIColor.white
+        contentView.layer.cornerRadius = 6
+        contentView.layer.masksToBounds = true
+    
+        contentView.addSubview(closeBtn)
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(lightRedBgView)
         lightRedBgView.addSubview(avatarImageView)
         lightRedBgView.addSubview(nameLabel)
         lightRedBgView.addSubview(liveTitleLabel)
-        containerView.addSubview(messageLabel)
-        containerView.addSubview(cancelBtn)
-        containerView.addSubview(sureBtn)
+        contentView.addSubview(messageLabel)
+        contentView.addSubview(cancelBtn)
+        contentView.addSubview(sureBtn)
     }
     
     func makeSubviewsConstraints() {
-        containerView.snp.makeConstraints { (maker) in
+        contentView.snp.makeConstraints { (maker) in
             maker.center.equalTo(view)
             maker.width.equalTo(254)
         }
         
         closeBtn.snp.makeConstraints { (maker) in
-            maker.top.equalTo(containerView).offset(5)
-            maker.trailing.equalTo(containerView).offset(-5)
+            maker.top.equalTo(contentView).offset(5)
+            maker.trailing.equalTo(contentView).offset(-5)
             maker.size.equalTo(CGSize.init(width: 25, height: 25))
         }
         
         titleLabel.snp.makeConstraints { (maker) in
-            maker.top.equalTo(containerView).offset(25)
-            maker.leading.equalTo(containerView).offset(15)
+            maker.top.equalTo(contentView).offset(25)
+            maker.leading.equalTo(contentView).offset(15)
         }
 
         lightRedBgView.snp.makeConstraints { (maker) in
             maker.top.equalTo(titleLabel.snp.bottom).offset(10)
-            maker.leading.equalTo(containerView).offset(15)
-            maker.trailing.equalTo(containerView).offset(-15)
+            maker.leading.equalTo(contentView).offset(15)
+            maker.trailing.equalTo(contentView).offset(-15)
         }
         
         avatarImageView.snp.makeConstraints { (maker) in
@@ -218,23 +199,23 @@ class JKBroadcastBeginAlertViewController: FDEBaseViewController, UIGestureRecog
         }
         
         messageLabel.snp.makeConstraints { (maker) in
-            maker.leading.equalTo(containerView).offset(15)
-            maker.trailing.equalTo(containerView).offset(-15)
+            maker.leading.equalTo(contentView).offset(15)
+            maker.trailing.equalTo(contentView).offset(-15)
             maker.top.equalTo(lightRedBgView.snp.bottom).offset(10)
         }
         
         cancelBtn.snp.makeConstraints { (maker) in
-            maker.leading.equalTo(containerView).offset(15)
+            maker.leading.equalTo(contentView).offset(15)
             maker.top.equalTo(messageLabel.snp.bottom).offset(20)
-            maker.bottom.equalTo(containerView).offset(-24)
+            maker.bottom.equalTo(contentView).offset(-24)
             maker.size.equalTo(CGSize.init(width: 60, height: 40))
         }
         
         sureBtn.snp.makeConstraints { (maker) in
             maker.leading.equalTo(cancelBtn.snp.trailing).offset(20)
-            maker.trailing.equalTo(containerView).offset(-15)
+            maker.trailing.equalTo(contentView).offset(-15)
             maker.top.equalTo(messageLabel.snp.bottom).offset(20)
-            maker.bottom.equalTo(containerView).offset(-24)
+            maker.bottom.equalTo(contentView).offset(-24)
             maker.height.equalTo(40)
         }
     }

@@ -1,9 +1,9 @@
 //
-//  ZAEAuditionEndBuyAlertViewController.swift
-//  EmotionCounsel
+//  JKAuditionEndBuyAlertViewController.swift
+//  UIPresentationController_demo
 //
-//  Created by 薛权 on 2019/7/3.
-//  Copyright © 2019 zhenai. All rights reserved.
+//  Created by jekyttt on 2019/3/13.
+//  Copyright © 2019 jekyttt. All rights reserved.
 //
 
 import UIKit

@@ -6,8 +6,8 @@
 //  Copyright © 2020 xuequan. All rights reserved.
 //
 
-#import "ZAEInterActiveGroupVipUserModel.h"
+#import "JKInterActiveGroupVipUserModel.h"
 
-@implementation ZAEInterActiveGroupVipUserModel
+@implementation JKInterActiveGroupVipUserModel
 
 @end

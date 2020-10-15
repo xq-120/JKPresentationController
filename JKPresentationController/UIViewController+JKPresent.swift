@@ -105,7 +105,7 @@ extension UIViewController: UIViewControllerTransitioningDelegate {
     /** 当点击到默认蒙层时是否自动关闭弹窗.注意:如果弹窗完全覆盖蒙层则该属性无效. */
     var jk_shouldDismissOnTouchBackView: Bool {get}
     
-    /** 默认蒙层的背景色.return clearColor to use your custom mask view if needed. */
+    /** 默认蒙层的背景色*/
     var jk_backViewBgColor: UIColor {get}
 }
 

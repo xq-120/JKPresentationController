@@ -211,7 +211,7 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
         let item7 = FDETaskItem.init()
         item7.title = "继承baseAlert"
         item7.didClickedBlk = {
-            let alert = ZAEAuditionEndBuyAlertViewController.init()
+            let alert = JKAuditionEndBuyAlertViewController.init()
             alert.jk_show(withViewController: self, animated: true) {
 
             }
@@ -228,7 +228,7 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
         let item8 = FDETaskItem.init()
         item8.title = "下上"
         item8.didClickedBlk = {
-            let alert = ZAESupportGroupVoteAlertViewController.init()
+            let alert = JKSupportGroupVoteAlertViewController.init()
             alert.jk_show(withViewController: self, animated: true) {
 
             }
