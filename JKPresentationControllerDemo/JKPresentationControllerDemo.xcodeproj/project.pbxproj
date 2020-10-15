@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F7B475725381F520042D511 /* FDETaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B475625381F520042D511 /* FDETaskItem.swift */; };
 		8FA746E8241E155E005F1923 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA746E7241E155E005F1923 /* AppDelegate.swift */; };
 		8FA746EA241E155E005F1923 /* FDEHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA746E9241E155E005F1923 /* FDEHomeViewController.swift */; };
 		8FA746EC241E155E005F1923 /* FDEDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA746EB241E155E005F1923 /* FDEDetailViewController.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		23C1FD4ABCCCA1634EAAAF42 /* Pods-JKPresentationControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKPresentationControllerDemo.debug.xcconfig"; path = "Target Support Files/Pods-JKPresentationControllerDemo/Pods-JKPresentationControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7120BC5386903570DB63CB98 /* Pods-JKPresentationControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKPresentationControllerDemo.release.xcconfig"; path = "Target Support Files/Pods-JKPresentationControllerDemo/Pods-JKPresentationControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8F7B475625381F520042D511 /* FDETaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDETaskItem.swift; sourceTree = "<group>"; };
 		8FA746E4241E155E005F1923 /* JKPresentationControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKPresentationControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA746E7241E155E005F1923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FA746E9241E155E005F1923 /* FDEHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDEHomeViewController.swift; sourceTree = "<group>"; };
@@ -153,17 +155,18 @@
 				8FA746F1241E155E005F1923 /* FDETabBarController.swift */,
 				8FA746F3241E155E005F1923 /* FDEBaseViewController.swift */,
 				8FA746F5241E155E005F1923 /* FDENavigationController.swift */,
-				8FA746F7241E155E005F1923 /* DLog.swift */,
 				8FA74728241E5792005F1923 /* JKPushAlertViewController.swift */,
 				8FA74720241E2E6C005F1923 /* JKPublishCommentAlertViewController.swift */,
 				8FA74726241E4EF3005F1923 /* JKBroadcastBeginAlertViewController.swift */,
 				8FD7B2D225373C5700BCD77C /* ZAEAuditionEndBuyAlertViewController.swift */,
 				8FD7B2D72537461100BCD77C /* ZAESupportGroupVoteAlertViewController.swift */,
-				8FA74722241E2E94005F1923 /* UIView+Corner.swift */,
-				8FD398F624FB43C500BAA9B7 /* UIViewController+TopViewController.swift */,
 				8FD398F724FB43C600BAA9B7 /* JKPresentContainerNavigationController.swift */,
 				8FD7B2DD2537464700BCD77C /* ZAEInterActiveGroupVipUserModel.h */,
 				8FD7B2DE2537464700BCD77C /* ZAEInterActiveGroupVipUserModel.m */,
+				8F7B475625381F520042D511 /* FDETaskItem.swift */,
+				8FA746F7241E155E005F1923 /* DLog.swift */,
+				8FA74722241E2E94005F1923 /* UIView+Corner.swift */,
+				8FD398F624FB43C500BAA9B7 /* UIViewController+TopViewController.swift */,
 				8FA746F9241E1561005F1923 /* Assets.xcassets */,
 				8FA746FB241E1561005F1923 /* LaunchScreen.storyboard */,
 				8FA746FE241E1561005F1923 /* Info.plist */,
@@ -380,6 +383,7 @@
 				8FA746F0241E155E005F1923 /* FDEMineViewController.swift in Sources */,
 				8FA746F8241E155E005F1923 /* DLog.swift in Sources */,
 				8FA746F6241E155E005F1923 /* FDENavigationController.swift in Sources */,
+				8F7B475725381F520042D511 /* FDETaskItem.swift in Sources */,
 				8FA746F2241E155E005F1923 /* FDETabBarController.swift in Sources */,
 				8FA746F4241E155E005F1923 /* FDEBaseViewController.swift in Sources */,
 				8FA746EA241E155E005F1923 /* FDEHomeViewController.swift in Sources */,

@@ -120,6 +120,8 @@ class JKPublishCommentAlertViewController: JKBaseAlertViewController {
         contentView.addSubview(textView)
         contentView.addSubview(anonymityBtn)
         contentView.addSubview(wordCntLabel)
+        
+        shouldDismissOnTouchBackView = false
     }
     
     func makeSubviewsConstraints() {

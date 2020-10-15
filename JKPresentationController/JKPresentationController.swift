@@ -37,12 +37,46 @@ class JKPresentationController: UIPresentationController {
     }
     
     override func presentationTransitionWillBegin() {
-        backView.alpha = 0
-        if let frame = self.containerView?.bounds {
-            backView.frame = frame
-        }
+        
+//        if let frame = self.containerView?.bounds {
+//            backView.frame = frame
+//        }
         //containerView只有在将要开始转场时系统才会创建,在此之前获取都是nil.
         containerView?.addSubview(backView)
+        
+        NSLayoutConstraint(item: backView,
+                           attribute: .leading,
+                           relatedBy: .equal,
+                           toItem: containerView,
+                           attribute: .leadingMargin,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
+
+        NSLayoutConstraint(item: backView,
+                           attribute: .trailing,
+                           relatedBy: .equal,
+                           toItem: containerView,
+                           attribute: .trailingMargin,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
+        
+        NSLayoutConstraint(item: backView,
+                           attribute: .top,
+                           relatedBy: .equal,
+                           toItem: containerView,
+                           attribute: .topMargin,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
+        
+        NSLayoutConstraint(item: backView,
+                           attribute: .bottom,
+                           relatedBy: .equal,
+                           toItem: containerView,
+                           attribute: .bottomMargin,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
+
+        backView.alpha = 0
         let duration = presentedViewController.jk_presentAnimation?.transitionDuration(using: nil) ?? 0.35
         UIView.animate(withDuration: duration) {
             self.backView.alpha = 1
