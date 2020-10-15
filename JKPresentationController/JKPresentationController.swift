@@ -37,18 +37,13 @@ class JKPresentationController: UIPresentationController {
     }
     
     override func presentationTransitionWillBegin() {
-        
-//        if let frame = self.containerView?.bounds {
-//            backView.frame = frame
-//        }
-        //containerView只有在将要开始转场时系统才会创建,在此之前获取都是nil.
         containerView?.addSubview(backView)
-        
+        backView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: backView,
                            attribute: .leading,
                            relatedBy: .equal,
                            toItem: containerView,
-                           attribute: .leadingMargin,
+                           attribute: .leading,
                            multiplier: 1.0,
                            constant: 0.0).isActive = true
 
@@ -56,7 +51,7 @@ class JKPresentationController: UIPresentationController {
                            attribute: .trailing,
                            relatedBy: .equal,
                            toItem: containerView,
-                           attribute: .trailingMargin,
+                           attribute: .trailing,
                            multiplier: 1.0,
                            constant: 0.0).isActive = true
         
@@ -64,7 +59,7 @@ class JKPresentationController: UIPresentationController {
                            attribute: .top,
                            relatedBy: .equal,
                            toItem: containerView,
-                           attribute: .topMargin,
+                           attribute: .top,
                            multiplier: 1.0,
                            constant: 0.0).isActive = true
         
@@ -72,7 +67,7 @@ class JKPresentationController: UIPresentationController {
                            attribute: .bottom,
                            relatedBy: .equal,
                            toItem: containerView,
-                           attribute: .bottomMargin,
+                           attribute: .bottom,
                            multiplier: 1.0,
                            constant: 0.0).isActive = true
 
