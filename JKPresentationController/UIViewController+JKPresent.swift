@@ -14,7 +14,6 @@ private struct AssociatedKeys {
     static var kAlertWindowKey = "kAlertWindowKey"
 }
 
-//为啥这里用不了public
 extension UIViewController: UIViewControllerTransitioningDelegate {
     //存储型属性
     @objc public var jk_presentAnimation: UIViewControllerAnimatedTransitioning? {

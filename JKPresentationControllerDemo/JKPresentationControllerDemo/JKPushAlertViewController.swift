@@ -105,6 +105,7 @@ class JKPushAlertViewController: FDEBaseViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+        self.view.frame = self.jk_presentedViewFrame
         print("viewWillLayoutSubviews view.frame:\(view.frame)")
     }
     
@@ -133,7 +134,7 @@ class JKPushAlertViewController: FDEBaseViewController {
     }
     
     func initialSubviews() {
-        view.backgroundColor = UIColor.red
+        view.backgroundColor = UIColor.white
         view.layer.cornerRadius = 6
         
         view.addSubview(lightRedBgView)
