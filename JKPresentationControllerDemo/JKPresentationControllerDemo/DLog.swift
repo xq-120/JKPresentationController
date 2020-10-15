@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 let dateFormatter = DateFormatter()
 
@@ -29,4 +30,14 @@ func DLog<T>(_ message:T, file:String = #file, function:String = #function, line
     print(consoleStr)
     
     #endif
+}
+
+func isIPhoneX() -> Bool {
+    if #available(iOS 11.0, *) {
+        guard let window = UIApplication.shared.keyWindow else { return false }
+        if window.safeAreaInsets.bottom > 0 {
+            return true
+        }
+    }
+    return false
 }

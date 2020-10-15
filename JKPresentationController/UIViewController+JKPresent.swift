@@ -110,7 +110,13 @@ extension UIViewController: UIViewControllerTransitioningDelegate {
 }
 
 extension UIViewController: JKPresentedViewProtocol {
-    open var jk_presentedViewFrame: CGRect { return UIScreen.main.bounds }
-    open var jk_shouldDismissOnTouchBackView: Bool { return true }
-    open var jk_backViewBgColor: UIColor { return UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5) }
+    open var jk_presentedViewFrame: CGRect {
+        return UIScreen.main.bounds
+    }
+    open var jk_shouldDismissOnTouchBackView: Bool {
+        return true
+    }
+    open var jk_backViewBgColor: UIColor {
+        return UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
+    }
 }

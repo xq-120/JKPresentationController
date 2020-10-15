@@ -24,7 +24,6 @@ public class JKLinearDownDismissAnimation: NSObject, UIViewControllerAnimatedTra
         let duration = self.transitionDuration(using: transitionContext)
         UIView.animate(withDuration: duration, animations: {
             fromVC.contentView.frame = CGRect.init(x: contentViewFrame.origin.x, y: contentViewFrame.origin.y + contentViewFrame.size.height, width: contentViewFrame.size.width, height: contentViewFrame.size.height)
-            fromVC.backView.alpha = 0
         }) { (finished) in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }

@@ -19,7 +19,7 @@ class ZAESupportGroupVoteAlertViewController: JKBaseAlertViewController, UIColle
         label.textColor = UIColor.black
         label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         label.backgroundColor = UIColor.white
-        label.text = "7人房间"
+        label.text = "Unidentified Flying Object"
         return label
     }()
     
@@ -72,22 +72,14 @@ class ZAESupportGroupVoteAlertViewController: JKBaseAlertViewController, UIColle
     
     override init() {
         super.init()
-//        self.jk_presentAnimation = JKLinearUpPresentAnimation.init()
-//        self.jk_dismissAnimation = JKLinearDownDismissAnimation.init()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override var jk_backViewBgColor: UIColor {
-        return UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.backViewBgColor = UIColor.clear
 
         initializeSubviews()
         makeSubviewContraints()
@@ -146,7 +138,7 @@ class ZAESupportGroupVoteAlertViewController: JKBaseAlertViewController, UIColle
         
         footerView.snp.makeConstraints { (maker) in
             maker.leading.trailing.bottom.equalTo(self.contentView)
-            maker.height.equalTo(74)
+            maker.height.equalTo(74 + (isIPhoneX() ? 34 : 0))
         }
     }
     

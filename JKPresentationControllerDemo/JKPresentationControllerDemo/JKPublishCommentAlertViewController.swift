@@ -10,21 +10,7 @@ import UIKit
 import SnapKit
 import JKPresentationController
 
-class JKPublishCommentAlertViewController: UIViewController {
-    
-    lazy var maskView: UIView = {
-        let view = UIView.init()
-        view.backgroundColor = UIColor.clear
-        
-        return view
-    }()
-    
-    lazy var containerView: UIView = {
-        let view = UIView.init()
-        view.backgroundColor = UIColor.white
-        
-        return view
-    }()
+class JKPublishCommentAlertViewController: JKBaseAlertViewController {
     
     lazy var lineView: UIView = {
         let view = UIView.init()
@@ -98,12 +84,9 @@ class JKPublishCommentAlertViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         view.layoutIfNeeded() //马上计算frame.
-        containerView.addRoundingCorners(roundedRect: containerView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize.init(width: 10, height: 10))
+        contentView.addRoundingCorners(roundedRect: contentView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize.init(width: 10, height: 10))
         
         textView.becomeFirstResponder()
-        
-        let tapGes = UITapGestureRecognizer.init(target: self, action: #selector(viewDidClicked(sender:)))
-        maskView.addGestureRecognizer(tapGes)
     }
     
     @objc func viewDidClicked(sender: UIView) -> Void {
@@ -128,69 +111,64 @@ class JKPublishCommentAlertViewController: UIViewController {
     
     func initialSubviews() {
         view.backgroundColor = UIColor.clear
-        
-        view.addSubview(maskView)
-        view.addSubview(containerView)
-        containerView.addSubview(cancelBtn)
-        containerView.addSubview(sureBtn)
-        containerView.addSubview(titleLabel)
-        containerView.addSubview(lineView)
-        containerView.addSubview(textView)
-        containerView.addSubview(anonymityBtn)
-        containerView.addSubview(wordCntLabel)
+    
+        view.addSubview(contentView)
+        contentView.addSubview(cancelBtn)
+        contentView.addSubview(sureBtn)
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(lineView)
+        contentView.addSubview(textView)
+        contentView.addSubview(anonymityBtn)
+        contentView.addSubview(wordCntLabel)
     }
     
     func makeSubviewsConstraints() {
         
-        maskView.snp.makeConstraints { (maker) in
-            maker.leading.trailing.top.bottom.equalTo(view)
-        }
-        
-        containerView.snp.makeConstraints { (maker) in
+        contentView.snp.makeConstraints { (maker) in
             maker.leading.trailing.bottom.equalTo(view)
             maker.height.equalTo(266)
         }
         
         cancelBtn.snp.makeConstraints { (maker) in
-            maker.leading.equalTo(containerView).offset(15)
+            maker.leading.equalTo(contentView).offset(15)
             maker.centerY.equalTo(titleLabel)
         }
         
         sureBtn.snp.makeConstraints { (maker) in
-            maker.trailing.equalTo(containerView).offset(-15)
+            maker.trailing.equalTo(contentView).offset(-15)
             maker.centerY.equalTo(titleLabel)
         }
         
         titleLabel.snp.makeConstraints { (maker) in
-            maker.top.equalTo(containerView)
+            maker.top.equalTo(contentView)
             maker.leading.greaterThanOrEqualTo(cancelBtn.snp.trailing).offset(10)
             maker.trailing.lessThanOrEqualTo(sureBtn.snp.leading).offset(-10)
-            maker.centerX.equalTo(containerView)
+            maker.centerX.equalTo(contentView)
             maker.height.equalTo(44)
         }
         
         lineView.snp.makeConstraints { (maker) in
             maker.top.equalTo(titleLabel.snp.bottom)
-            maker.leading.equalTo(containerView)
-            maker.trailing.equalTo(containerView)
+            maker.leading.equalTo(contentView)
+            maker.trailing.equalTo(contentView)
             maker.height.equalTo(1/UIScreen.main.scale)
         }
         
         textView.snp.makeConstraints { (maker) in
             maker.top.equalTo(lineView.snp.bottom).offset(15)
-            maker.leading.equalTo(containerView).offset(15)
-            maker.trailing.equalTo(containerView).offset(-15)
+            maker.leading.equalTo(contentView).offset(15)
+            maker.trailing.equalTo(contentView).offset(-15)
             maker.bottom.equalTo(anonymityBtn.snp.top)
         }
         
         anonymityBtn.snp.makeConstraints { (maker) in
-            maker.leading.equalTo(containerView).offset(15)
-            maker.bottom.equalTo(containerView).offset(0)
+            maker.leading.equalTo(contentView).offset(15)
+            maker.bottom.equalTo(contentView).offset(0)
             maker.height.equalTo(44)
         }
         
         wordCntLabel.snp.makeConstraints { (maker) in
-            maker.trailing.equalTo(containerView).offset(-15)
+            maker.trailing.equalTo(contentView).offset(-15)
             maker.centerY.equalTo(anonymityBtn)
         }
     }
@@ -202,7 +180,7 @@ class JKPublishCommentAlertViewController: UIViewController {
         
         let duration = userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
         
-        containerView.snp.updateConstraints { (maker) in
+        contentView.snp.updateConstraints { (maker) in
             maker.bottom.equalTo(self.view).offset(-keyboardH)
         }
 
@@ -215,7 +193,7 @@ class JKPublishCommentAlertViewController: UIViewController {
         let userInfo = notification.userInfo
         let duration = userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
         
-        containerView.snp.updateConstraints { (maker) in
+        contentView.snp.updateConstraints { (maker) in
             maker.bottom.equalTo(self.view).offset(0)
         }
         

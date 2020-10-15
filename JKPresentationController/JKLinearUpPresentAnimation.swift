@@ -20,7 +20,6 @@ public class JKLinearUpPresentAnimation: NSObject, UIViewControllerAnimatedTrans
         
         let contentViewFrame = toVC.contentView.frame
         toVC.contentView.frame = CGRect.init(x: contentViewFrame.origin.x, y: contentViewFrame.origin.y + contentViewFrame.size.height, width: contentViewFrame.size.width, height: contentViewFrame.size.height)
-        toVC.backView.alpha = 0
         
         let containerView = transitionContext.containerView
         containerView.addSubview(toVC.view)
@@ -28,7 +27,7 @@ public class JKLinearUpPresentAnimation: NSObject, UIViewControllerAnimatedTrans
         let duration = self.transitionDuration(using: transitionContext)
         UIView.animate(withDuration: duration, animations: {
             toVC.contentView.frame = contentViewFrame
-            toVC.backView.alpha = 1
+            
         }) { (finished) in
             transitionContext.completeTransition(true)
         }
