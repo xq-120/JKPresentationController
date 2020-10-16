@@ -7,23 +7,21 @@
 
 import UIKit
 
-public class JKLinearDownDismissAnimation: NSObject, UIViewControllerAnimatedTransitioning {
+public class JKSlideOutToBottomDismissAnimation: NSObject, UIViewControllerAnimatedTransitioning {
     public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.25
     }
     
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        guard let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as? JKBaseAlertViewController, let _ = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) else {
+        guard let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from), let _ = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) else {
             return
         }
         
         let initialFrame = transitionContext.initialFrame(for: fromVC)
-        
-        let contentViewFrame = fromVC.contentView.frame
         let duration = self.transitionDuration(using: transitionContext)
         UIView.animate(withDuration: duration, animations: {
-            fromVC.contentView.frame = CGRect.init(x: contentViewFrame.origin.x, y: contentViewFrame.origin.y + contentViewFrame.size.height, width: contentViewFrame.size.width, height: contentViewFrame.size.height)
+            fromVC.view.frame = CGRect.init(origin: CGPoint.init(x: initialFrame.origin.x, y: UIScreen.main.bounds.size.height), size: initialFrame.size)
         }) { (finished) in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }

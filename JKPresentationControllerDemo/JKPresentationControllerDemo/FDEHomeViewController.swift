@@ -173,7 +173,7 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
         dataList.append(item7)
         
         let item8 = FDETaskItem.init()
-        item8.title = "使用系统modal动画"
+        item8.title = "系统默认modal动画"
         item8.didClickedBlk = { [weak self] in
             guard let strongSelf = self else { return }
             let alert = JKSupportGroupVoteAlertViewController.init()
@@ -189,6 +189,26 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
             }
         }
         dataList.append(item8)
+        
+        let item9 = FDETaskItem.init()
+        item9.title = "slide-in,slide-out动画"
+        item9.didClickedBlk = { [weak self] in
+            guard let strongSelf = self else { return }
+            let alert = JKAuditionEndBuyAlertViewController.init()
+            alert.jk_presentAnimation = JKSlideInFromTopPresentAnimation.init()
+            alert.jk_dismissAnimation = JKSlideOutToBottomDismissAnimation.init()
+            alert.jk_show(withViewController: strongSelf, animated: true) {
+
+            }
+            alert.buyBtnDidClickedBlk = { [weak alert, weak self] in
+                let detail = FDEDetailViewController.init()
+                detail.modalPresentationStyle = .fullScreen
+                alert?.present(detail, animated: true) { [weak detail] in
+                    print(detail?.presentingViewController ?? "")
+                }
+            }
+        }
+        dataList.append(item9)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
