@@ -13,15 +13,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIColor *backViewBgColor;
 
-@property (nonatomic, assign) NSInteger tag;
-
+/** 默认YES。 */
 @property (nonatomic, assign) BOOL shouldDismissOnTouchBackView;
+
+@property (nonatomic, assign) NSInteger tag;
 
 @property (nonatomic, readonly, strong) UIView *contentView;
 
 - (instancetype)init;
-
-- (CGRect)finalFrameForContentView;
 
 @end
 

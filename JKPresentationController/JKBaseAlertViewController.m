@@ -25,7 +25,7 @@
 - (instancetype)init {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
-        self.shouldDismissOnTouchBackView = YES;
+        self.shouldDismissOnTouchBackView = NO;
     }
     return self;
 }

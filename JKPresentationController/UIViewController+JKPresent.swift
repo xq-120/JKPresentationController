@@ -113,7 +113,7 @@ extension UIViewController: JKPresentedViewProtocol {
         return UIScreen.main.bounds
     }
     open var jk_shouldDismissOnTouchBackView: Bool {
-        return true
+        return false
     }
     open var jk_backViewBgColor: UIColor {
         return UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)

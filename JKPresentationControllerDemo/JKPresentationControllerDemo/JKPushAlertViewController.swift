@@ -105,7 +105,6 @@ class JKPushAlertViewController: FDEBaseViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        self.view.frame = self.jk_presentedViewFrame
         print("viewWillLayoutSubviews view.frame:\(view.frame)")
     }
     

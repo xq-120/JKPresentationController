@@ -115,13 +115,13 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
             alert.confirmBtnDidClickedBlk = { [weak alert, weak self] in
                 let detail = FDEDetailViewController.init()
                 /**
-                 不能使用fullScreen否则alert frame会变大。如果一定要用fullScreen，解决办法：
+                 这里modalPresentationStyle不能使用fullScreen否则alert frame会变大。如果一定要用fullScreen，解决办法：
                  1.继承JKBaseAlertViewController
                  2.如果不继承JKBaseAlertViewController，
                  则需要在viewWillLayoutSubviews里重新设置view的大小。
                  */
-//                detail.modalPresentationStyle = .overFullScreen
-                detail.modalPresentationStyle = .fullScreen
+                detail.modalPresentationStyle = .overFullScreen
+//                detail.modalPresentationStyle = .fullScreen
                 alert?.present(detail, animated: true) {
                     print(detail.presentingViewController)
                 }
@@ -181,11 +181,7 @@ class FDEHomeViewController: FDEBaseViewController, UITableViewDelegate, UITable
 
             }
             alert.confirmBtnDidClickedBlk = { [weak alert, weak self] selectedItem in
-                let detail = FDEDetailViewController.init()
-                detail.modalPresentationStyle = .fullScreen
-                alert?.present(detail, animated: true) { [weak detail] in
-                    print(detail?.presentingViewController ?? "")
-                }
+                alert?.jk_hide()
             }
         }
         dataList.append(item8)

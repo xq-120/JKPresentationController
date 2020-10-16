@@ -41,7 +41,6 @@ class JKSupportGroupVoteAlertViewController: JKBaseAlertViewController, UICollec
         button.addTarget(self, action: #selector(confirmBtnDidClicked(sender:)), for: .touchUpInside)
         button.adjustsImageWhenHighlighted = false
         button.adjustsImageWhenDisabled = false
-        button.isEnabled = false
         button.tag = 1000
         view.addSubview(button)
         
@@ -71,7 +70,7 @@ class JKSupportGroupVoteAlertViewController: JKBaseAlertViewController, UICollec
     var dataList: [JKInterActiveGroupVipUserModel] = []
     var selectedItem: JKInterActiveGroupVipUserModel?
     
-    @objc var confirmBtnDidClickedBlk: ((JKInterActiveGroupVipUserModel) -> Void)?
+    @objc var confirmBtnDidClickedBlk: ((JKInterActiveGroupVipUserModel?) -> Void)?
     
     override init() {
         super.init()
@@ -137,7 +136,7 @@ class JKSupportGroupVoteAlertViewController: JKBaseAlertViewController, UICollec
     }
     
     @objc func confirmBtnDidClicked(sender: Any?) -> Void {
-        confirmBtnDidClickedBlk?(self.selectedItem!)
+        confirmBtnDidClickedBlk?(self.selectedItem)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -199,7 +198,6 @@ class JKSupportGroupVoteAlertViewController: JKBaseAlertViewController, UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedItem = self.dataList[indexPath.row]
         collectionView.reloadData()
-        confirmBtn.isEnabled = true
     }
 
 }

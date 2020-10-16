@@ -52,6 +52,9 @@ self.jk_hide(withAnimated: true) { [unowned self] in
 }
 ```
 
+# 注意
+推荐继承JKBaseAlertViewController。
+
 一些弹窗示例:
 
 <img src="https://raw.githubusercontent.com/xq-120/cloudImage/master/pictures/20200315223637.png" alt="图片替换文本" width="200" height="400" align="middle" />
