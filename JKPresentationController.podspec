@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "JKPresentationController"
-  spec.version      = "1.0.0"
+  spec.version      = "2.0.0"
   spec.summary      = "基于UIPresentationController对弹窗公共部分的一层封装."
 
   # This description is used to generate tags and improve search results.
