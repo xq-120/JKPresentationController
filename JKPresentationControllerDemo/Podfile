@@ -5,7 +5,7 @@ use_frameworks!
 
 target 'JKPresentationControllerDemo' do
 
-#pod 'JKPresentationController', '~> 1.0.0'
+#pod 'JKPresentationController', '~> 2.0.0'
 pod 'JKPresentationController', :path => '../'
 pod 'SnapKit', '~> 5.0.0'
 pod 'FDFullscreenPopGesture', '~> 1.1'
