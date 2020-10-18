@@ -52,8 +52,15 @@
 
 - (void)backViewDidClicked:(UIButton *)sender {
     if (self.shouldDismissOnTouchBackView) {
+        __weak typeof(self) weakSelf = self;
         [self jk_hideWithAnimated:YES completion:^{
-            
+            __strong typeof(self) strongSelf = weakSelf;
+            if (strongSelf == nil) {
+                return;
+            }
+            if (strongSelf.dismissOnTouchBackViewBlk) {
+                strongSelf.dismissOnTouchBackViewBlk();
+            }
         }];
     }
 }

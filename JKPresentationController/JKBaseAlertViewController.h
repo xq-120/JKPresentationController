@@ -13,12 +13,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIColor *backViewBgColor;
 
-/** 默认YES。 */
+/** 默认NO。 */
 @property (nonatomic, assign) BOOL shouldDismissOnTouchBackView;
 
 @property (nonatomic, assign) NSInteger tag;
 
 @property (nonatomic, readonly, strong) UIView *contentView;
+
+/** shouldDismissOnTouchBackView为YES时，点击蒙层消失回调。 */
+@property (nonatomic, copy) void (^dismissOnTouchBackViewBlk)(void);
 
 - (instancetype)init;
 

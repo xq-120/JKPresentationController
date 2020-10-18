@@ -105,6 +105,7 @@ class JKBroadcastBeginAlertViewController: JKBaseAlertViewController {
         super.init()
         self.jk_presentAnimation = JKFadeInPresentAnimation.init()
         self.jk_dismissAnimation = JKFadeOutDismissAnimation.init()
+        self.shouldDismissOnTouchBackView = true
     }
     
     required init?(coder: NSCoder) {
