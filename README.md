@@ -15,7 +15,7 @@ JKPresentationController封装了弹窗的显示与隐藏，并提供了默认�
 pod 'JKPresentationController'
 ```
 
-注意：OC项目的Podfile文件，需要添加 `use_frameworks!` 。
+注意：Podfile文件需要添加 `use_frameworks!` 。
 
 # 使用
 
