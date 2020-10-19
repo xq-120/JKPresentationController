@@ -2,13 +2,23 @@
 JKPresentationController封装了弹窗的显示与隐藏，并提供了默认的淡入淡出动画。使用者只需关注弹窗的内容，其他的交给这个库就完事了。
 
 特点
+* 使用UIViewController作为弹窗载体。
 * 提供统一的弹出与隐藏方法，规范 API。
 * 提供默认的淡入淡出动画，支持自定义弹出/隐藏动画。
 * 与具体的弹窗内容无关，自由度更高。
 * 采用扩展的方式实现，对代码无侵入性。
 * 兼容 OC。
 
+# 集成
+
+```
+pod 'JKPresentationController'
+```
+
+注意：OC项目的Podfile文件，需要添加 `use_frameworks!` 。
+
 # 使用
+
 创建好弹窗控制器后,调用弹出方法即可.
 ```
 let alert = JKBroadcastBeginAlertViewController.init()
@@ -53,7 +63,9 @@ self.jk_hide(withAnimated: true) { [unowned self] in
 ```
 
 # 注意
-推荐继承JKBaseAlertViewController。
+弹窗推荐继承JKBaseAlertViewController。
+
+# 示例
 
 一些弹窗示例:
 
